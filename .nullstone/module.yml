@@ -1,0 +1,15 @@
+org_name: Evolve
+name: aws-cloudsearch-access
+friendly_name: CloudSearch Access
+description: Capability to grant access to an AWS CloudSearch domain from an application
+category: capability
+subcategory: datastores
+provider_types:
+    - aws
+platform: cloudsearch
+subplatform: ""
+type: ""
+appCategories:
+    - container
+    - serverless
+is_public: false
