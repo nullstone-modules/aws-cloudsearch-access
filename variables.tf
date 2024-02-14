@@ -7,3 +7,7 @@ EOF
   type    = map(string)
   default = {}
 }
+
+locals {
+  protocol = "https"
+}
