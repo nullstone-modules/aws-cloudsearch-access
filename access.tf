@@ -17,6 +17,11 @@ data "aws_iam_policy_document" "access" {
     actions = [
       "cloudsearch:document",
       "cloudsearch:search",
+      "cloudsearch:DefineIndexField",
+      "cloudsearch:DeleteIndexField",
+      "cloudsearch:DescribeIndexFields",
+      "cloudsearch:IndexDocuments",
+      "cloudsearch:DescribeDomains",
     ]
   }
 }
