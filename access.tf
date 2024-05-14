@@ -21,6 +21,14 @@ data "aws_iam_policy_document" "access" {
       "cloudsearch:DeleteIndexField",
       "cloudsearch:DescribeIndexFields",
       "cloudsearch:IndexDocuments",
+    ]
+  }
+
+  statement {
+    effect    = "Allow"
+    resources = ["arn:aws:cloudsearch:${local.region}:${local.account_id}:domain/*"]
+
+    actions = [
       "cloudsearch:DescribeDomains",
     ]
   }
