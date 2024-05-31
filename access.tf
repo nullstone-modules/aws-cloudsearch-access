@@ -17,10 +17,6 @@ data "aws_iam_policy_document" "access" {
     actions = [
       "cloudsearch:document",
       "cloudsearch:search",
-      "cloudsearch:DefineIndexField",
-      "cloudsearch:DeleteIndexField",
-      "cloudsearch:DescribeIndexFields",
-      "cloudsearch:IndexDocuments",
     ]
   }
 
@@ -29,9 +25,11 @@ data "aws_iam_policy_document" "access" {
     resources = ["arn:aws:cloudsearch:${local.region}:${local.account_id}:domain/*"]
 
     actions = [
-      "cloudsearch:DescribeDomains",
-      "cloudsearch:DescribeIndexFields",
       "cloudsearch:DefineIndexField",
+      "cloudsearch:DeleteIndexField",
+      "cloudsearch:DescribeIndexFields",
+      "cloudsearch:DescribeDomains",
+      "cloudsearch:IndexDocuments",
     ]
   }
 }
